@@ -79,28 +79,7 @@ data:
 -----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEA1234567890abcdefghijklmnopqrstuvwxyzABCD
 -----END RSA PRIVATE KEY-----
- 
-// Pattern 29: GitHub Token Pattern
-github_token = "ghp_1234567890abcdefghijklmnopqrstuvwxyzABCDEFG",
- 
-// Pattern 30: AWS Access Key Pattern
-aws_access_key_id = "AKIAIOSFODNN7EXAMPLE",
-aws_secret_access_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
- 
-// Pattern 31: Basic Auth Encoded
-Authorization: "Basic YWRtaW46cGFzc3dvcmQxMjM0NTY3OA==",
- 
-// Pattern 32: Stripe API Keys
-STRIPE_PUBLISHABLE_KEY = "pk_live_abc123def456ghi789jkl",
-STRIPE_SECRET_KEY = "sk_live_xyz789abc123def456ghi",
- 
-// Pattern 33: SendGrid API Key
-SENDGRID_API_KEY = "SG.abc123def456ghi789jkl_production",
- 
-// Pattern 34: Firebase Credentials
-"firebase_secret": "AIzaSyAbc123Def456Ghi789Jkl012Mno345Pqr",
-"firebase_token": "abc123def456ghi789jkl012mno345pqr",
- 
+  
 // Pattern 35: Slack Bot Token
 SLACK_BOT_TOKEN = "xoxb-123456789012-1234567890123-abcdefghijklmnopqrst",
  
