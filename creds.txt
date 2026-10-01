@@ -1,7 +1,39 @@
 / Test file for Checkmarx Cx1 Secrets Detection Rule Validation
 // Contains realistic patterns extracted from customer data with unmasked values
  
-
+// Pattern 1: JSON Key-Value Pairs (ParameterKey)
+"ParameterKey": "ptag_abc123def456ghi789",
+"ParameterKey": "pPriority_2024_secured_token",
+ 
+// Pattern 2: API Title
+"APITitle": "VendorAPI_production_key",
+"APITitle": "VendorServiceEndpoint_v2",
+ 
+// Pattern 3: Variable Assignment with Secret
+_SECRET = "ghp_1234567890abcdefghijklmnopqrstuvwxyz",
+ 
+// Pattern 4: Token URLs (hcpToken)
+salesInquiryLink: 'https://medical.lilly.com/us/products/contact/samples-and-sales-representative-request?hcpToken=A12D_XYZ123456789ABC%27,
+questionLink: 'https://medical.lilly.com/us/products/contact/submit-a-question?hcpToken=A12D_PROD_987654321XYZ',
+ 
+// Pattern 5: Client IDs
+"short_description": "Add my ClientId to the access list. Client ID: 3750_SECURE_IDENTIFIER_12345",
+"short_description": "Want my Client ID added to dev cortex access list. Client ID: 5144_DEV_ACCESS_KEY_98765",
+"short_description": "Want my Client ID added to QA cortex access list. Client ID: c301_QA_ENVIRONMENT_TOKEN",
+ 
+// Pattern 6: Password Fields
+PASSWORD = "MyP@ssw0rd_ProductionEnv_2024",
+"password": "admin_secure_password_12345",
+ 
+// Pattern 7: Bearer Tokens in Curl Requests
+"curl -X POST https://vdac.example.com/user \
+  -H ""Content-Type: application/json"" \
+  -H ""Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ"" \",
+ 
+"curl -X POST https://vdac.example.com/check \
+  -H ""Content-Type: application/json"" \
+  -H ""Authorization: Bearer your_production_bearer_token_abc123xyz"" \",
+ 
 // Pattern 8: C Code Secret
 const char* DEFAULT_KEY = "abcd_secure_key_1234567890",
  
@@ -60,6 +92,61 @@ KEY1.DURATION_VOD__C, GEO1.COUNTRY_CODE, AC.LOWEST_LEVEL_ALIGNMENT_ID, KEY1.CALL
 "no-email": "Email address is required",
 "user-password": "Password is required",
 "user-blocked": "Your account has been blocked after multiple consecutive login attempts",
-
-
+ 
+// Pattern 24: Flask/Web Framework Secrets
+SECRET_KEY = "flask_secret_key_abc123def456ghi789jkl",
+DEBUG = "False",
+DATABASE_PASSWORD = "prod_db_password_secure_2024",
+ 
+// Pattern 25: Environment Variables
+export API_TOKEN="api_token_production_secure_123",
+export DB_PASSWORD="database_password_prod_xyz789",
+export STRIPE_API_KEY="sk_live_stripe_key_abc123def456",
+ 
+// Pattern 26: Docker/Kubernetes Secrets
+POSTGRES_PASSWORD: "postgres_prod_password_secure",
+MYSQL_ROOT_PASSWORD: "mysql_root_password_2024_secure",
+SECRET_API_KEY: "kubernetes_secret_api_key_value",
+ 
+// Pattern 27: Kubernetes Secret Reference
+apiVersion: v1
+kind: Secret
+metadata:
+  name: app-secrets
+data:
+  api-key: YXBpX2tleV9zZWN1cmVfdmFsdWVfYWJjMTIz
+  db-password: ZGJfcGFzc3dvcmRfc2VjdXJlXzEyMzQ1Njc4OTA=
+ 
+// Pattern 28: SSH Private Key Indicator (May be caught by key detection)
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA1234567890abcdefghijklmnopqrstuvwxyzABCD
+-----END RSA PRIVATE KEY-----
+ 
+// Pattern 29: GitHub Token Pattern
+github_token = "ghp_1234567890abcdefghijklmnopqrstuvwxyzABCDEFG",
+ 
+// Pattern 30: AWS Access Key Pattern
+aws_access_key_id = "AKIAIOSFODNN7EXAMPLE",
+aws_secret_access_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+ 
+// Pattern 31: Basic Auth Encoded
+Authorization: "Basic YWRtaW46cGFzc3dvcmQxMjM0NTY3OA==",
+ 
+// Pattern 32: Stripe API Keys
+STRIPE_PUBLISHABLE_KEY = "pk_live_abc123def456ghi789jkl",
+STRIPE_SECRET_KEY = "sk_live_xyz789abc123def456ghi",
+ 
+// Pattern 33: SendGrid API Key
+SENDGRID_API_KEY = "SG.abc123def456ghi789jkl_production",
+ 
+// Pattern 34: Firebase Credentials
+"firebase_secret": "AIzaSyAbc123Def456Ghi789Jkl012Mno345Pqr",
+"firebase_token": "abc123def456ghi789jkl012mno345pqr",
+ 
+// Pattern 35: Slack Bot Token
+SLACK_BOT_TOKEN = "xoxb-123456789012-1234567890123-abcdefghijklmnopqrst",
+ 
+// Pattern 36: JWT Bearer Token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c,
+ 
 // End of Test Patterns File
