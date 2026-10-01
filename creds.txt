@@ -1,0 +1,12 @@
+/ Test file for Checkmarx Cx1 Secrets Detection Rule Validation
+// Contains realistic patterns extracted from customer data with unmasked values
+ 
+// Pattern 1: JSON Key-Value Pairs (ParameterKey)
+"ParameterKey": "ptag_abc123def456ghi789",
+"ParameterKey": "pPriority_2024_secured_token",
+ 
+// Pattern 2: API Title
+"APITitle": "VendorAPI_production_key",
+"APITitle": "VendorServiceEndpoint_v2",
+ 
+// End of Test Patterns File
