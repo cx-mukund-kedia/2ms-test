@@ -1,4 +1,5 @@
-
+random_secret = "secret_key_pass"
+mysecret = ['keyalgorithm','rsaalgorithm','shaalgorithm','md5algorithm']
  
 // Pattern 18: OAuth Consumer Credentials
 consumer_secret = "OIDC_secret_value_abc123def456ghi789",
