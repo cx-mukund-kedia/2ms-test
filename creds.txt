@@ -1,5 +1,67 @@
 random_secret = "secret_key_pass"
 mysecret = ['keyalgorithm','rsaalgorithm','shaalgorithm','md5algorithm']
+
+
+
+
+    
+  
+COOKIE_SECRET = "cookie"
+CSRF_SECRET = "csrf"
+MASTER_KEY = "master"
+ENCRYPTION_SECRET = "encrypt"
+APP_SECRET = "application"
+SERVICE_ACCOUNT_KEY = "service"
+DEPLOYMENT_TOKEN = "deployment"
+REGISTRY_PASSWORD = "registry"
+SECRET = "secret"
+TOKEN = "token"
+PASSWORD = "password"
+KEY = "key"
+
+# Dictionary-style examples
+
+config = {
+    "api_key": "example",
+    "api_secret": "something",
+    "secret_key": "generic",
+    "client_secret": "placeholder",
+    "access_token": "test",
+    "auth_token": "sample",
+    "private_key": "not-a-private-key",
+    "password": "password",
+    "database_password": "database",
+    "jwt_secret": "jwt",
+    "webhook_secret": "webhook",
+    "encryption_key": "default",
+}
+
+# Nested configuration examples
+
+application = {
+    "credentials": {
+        "username": "user",
+        "password": "password",
+        "apiKey": "example",
+        "secret": "placeholder",
+        "token": "test",
+    },
+    "security": {
+        "clientSecret": "client",
+        "signingKey": "signing",
+        "masterKey": "master",
+    },
+}
+
+# JSON-like configuration
+
+json_config = {
+    "AWS_SECRET_ACCESS_KEY": "example",
+    "GITHUB_TOKEN": "github",
+    "STRIPE_SECRET_KEY": "stripe",
+    "GOOGLE_API_KEY": "google",
+    "OAUTH_CLIENT_SECRET": "oauth",
+}
  
 // Pattern 18: OAuth Consumer Credentials
 consumer_secret = "OIDC_secret_value_abc123def456ghi789",
