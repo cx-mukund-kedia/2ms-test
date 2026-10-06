@@ -1,68 +1,49 @@
-random_secret = "secret_key_pass"
-mysecret = ['keyalgorithm','rsaalgorithm','shaalgorithm','md5algorithm']
-
 
 
 
     
   
-COOKIE_SECRET = "cookie"
-CSRF_SECRET = "csrf"
-MASTER_KEY = "master"
-ENCRYPTION_SECRET = "encrypt"
-APP_SECRET = "application"
-SERVICE_ACCOUNT_KEY = "service"
-DEPLOYMENT_TOKEN = "deployment"
-REGISTRY_PASSWORD = "registry"
-SECRET = "secret"
-TOKEN = "token"
-PASSWORD = "password"
-KEY = "key"
 
-# Dictionary-style examples
-
-config = {
-    "api_key": "example",
-    "api_secret": "something",
-    "secret_key": "generic",
-    "client_secret": "placeholder",
-    "access_token": "test",
-    "auth_token": "sample",
-    "private_key": "not-a-private-key",
-    "password": "password",
-    "database_password": "database",
-    "jwt_secret": "jwt",
-    "webhook_secret": "webhook",
-    "encryption_key": "default",
+settings = {
+    "apiKey": "application-config",
+    "clientSecret": "client-config",
+    "authToken": "session-header",
+    "databasePassword": "database-config",
+    "privateKey": "local-config",
+    "accessToken": "request-header",
 }
 
-# Nested configuration examples
+# HTML/template-like configuration
 
-application = {
-    "credentials": {
-        "username": "user",
-        "password": "password",
-        "apiKey": "example",
-        "secret": "placeholder",
-        "token": "test",
-    },
-    "security": {
-        "clientSecret": "client",
-        "signingKey": "signing",
-        "masterKey": "master",
-    },
+html_config = {
+    "api_key": "form-handler",
+    "client_secret": "page-config",
+    "token": "request-param",
+    "secret": "template-value",
+    "password": "input-value",
 }
 
-# JSON-like configuration
+# JavaScript / TypeScript-style configuration
 
-json_config = {
-    "AWS_SECRET_ACCESS_KEY": "example",
-    "GITHUB_TOKEN": "github",
-    "STRIPE_SECRET_KEY": "stripe",
-    "GOOGLE_API_KEY": "google",
-    "OAUTH_CLIENT_SECRET": "oauth",
+const_config = {
+    "API_KEY": "module-config",
+    "AUTH_TOKEN": "request-context",
+    "CLIENT_SECRET": "service-config",
+    "PRIVATE_KEY": "runtime-config",
+    "WEBHOOK_SECRET": "callback-handler",
 }
- 
+
+# YAML/environment-style configuration values
+
+environment_config = {
+    "DATABASE_PASSWORD": "connection-config",
+    "AWS_SECRET_ACCESS_KEY": "cloud-service",
+    "GITHUB_TOKEN": "repository-config",
+    "OAUTH_CLIENT_SECRET": "oauth-client",
+    "GOOGLE_API_KEY": "application-client",
+}
+
+
 // Pattern 18: OAuth Consumer Credentials
 consumer_secret = "OIDC_secret_value_abc123def456ghi789",
 consumer_key = "EZRy_consumer_key_secure_jkl123mno456",
